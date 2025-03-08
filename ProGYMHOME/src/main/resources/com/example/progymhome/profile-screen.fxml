@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="640.0" prefWidth="375.0" style="-fx-background-color: 95ADFE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.ProfileScreenController">
+   <children>
+      <AnchorPane layoutX="29.0" layoutY="20.0" prefHeight="30.0" prefWidth="315.0">
+         <children>
+            <BorderPane prefHeight="30.0" prefWidth="315.0">
+               <center>
+                  <Label text="Profile" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Poppins Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="124.0" layoutY="70.0" prefHeight="182.0" prefWidth="128.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="182.0" prefWidth="128.0">
+               <children>
+                  <ImageView fx:id="setImage" fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../1/logo Pro_2.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="setNameTextFIeld" alignment="CENTER" prefHeight="30.0" prefWidth="128.0" text="Name" />
+                  <Label fx:id="upLoadImage" alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="30.0" prefWidth="128.0" text="Up Load Your Image" />
+                  <Button fx:id="onClickEdit" mnemonicParsing="false" prefHeight="33.0" prefWidth="128.0" style="-fx-background-radius: 25px; -fx-background-color: linear-gradient(to right, #92A3FD, #9DCEFF);" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font name="Inter Regular" size="15.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="30.0" layoutY="285.0" prefHeight="305.0" prefWidth="315.0" spacing="23.0">
+         <children>
+            <HBox prefHeight="65.0" prefWidth="315.0" spacing="15.0">
+               <children>
+                  <AnchorPane prefHeight="65.0" prefWidth="95.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 16px;">
+                     <children>
+                        <Label layoutX="28.0" layoutY="33.0" text="Height">
+                           <font>
+                              <Font name="Inter Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="setHeightUser" fill="#92a3fd" layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="175cm">
+                           <font>
+                              <Font name="Poppins Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="95.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 16px;">
+                     <children>
+                        <Text fx:id="setWeightUser" fill="#92a3fd" layoutX="29.0" layoutY="-81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="65kg" y="100.0">
+                           <font>
+                              <Font name="Poppins Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="23.0" layoutY="32.0" text="Weight">
+                           <font>
+                              <Font name="Inter Regular" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="65.0" prefWidth="95.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 16px;">
+                     <children>
+                        <Label layoutX="34.0" layoutY="34.0" text="Age">
+                           <font>
+                              <Font name="Inter Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="setAgeUser" fill="#92a3fd" layoutX="31.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="22y0">
+                           <font>
+                              <Font name="Poppins Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <VBox prefHeight="217.0" prefWidth="315.0" spacing="15.0" style="-fx-background-color: ffffff; -fx-background-radius: 16px;">
+               <children>
+                  <AnchorPane prefHeight="211.0" prefWidth="315.0">
+                     <children>
+                        <Label layoutX="118.0" layoutY="14.0" text="Account">
+                           <font>
+                              <Font name="Inter Regular" size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutY="53.0" prefHeight="147.0" prefWidth="315.0" spacing="10.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="315.0" text="Personal Data">
+                                 <font>
+                                    <Font name="Inter Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="315.0" text="Achievement">
+                                 <font>
+                                    <Font name="Inter Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="35.0" prefHeight="29.0" prefWidth="315.0" text="Activity History">
+                                 <font>
+                                    <Font name="Inter Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="10.0" layoutY="61.0" prefHeight="30.0" prefWidth="315.0" text="Workout Progress">
+                                 <font>
+                                    <Font name="Inter Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="591.0" prefHeight="49.0" prefWidth="375.0" spacing="60.0">
+         <children>
+            <ImageView fx:id="onClickHome" fitHeight="24.0" fitWidth="24.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/8666691_home_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="onClickProgress" fitHeight="24.0" fitWidth="24.0" layoutX="10.0" layoutY="10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/6643382_consistant_diet_exercise_fitness_plan_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="onClickProfile" fitHeight="24.0" fitWidth="24.0" layoutX="210.0" layoutY="10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/8666609_user_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="onClickSetUp" fitHeight="24.0" fitWidth="24.0" layoutX="410.0" layoutY="10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/8666615_settings_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.HelloController">
+   <children>
+      <AnchorPane layoutX="30.0" prefHeight="47.0" prefWidth="315.0">
+         <children>
+            <Label layoutY="12.0" prefHeight="28.0" prefWidth="177.0" text="Workout Lessons">
+               <font>
+                  <Font name="Poppins Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="271.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Weight.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="47.0" prefHeight="200.0" prefWidth="376.0">
+         <children>
+            <Label layoutX="14.0" layoutY="2.0" text="You'll Need">
+               <font>
+                  <Font name="Poppins Bold" size="15.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="-1.0" layoutY="23.0" prefHeight="177.0" prefWidth="376.0">
+               <content>
+                  <HBox prefHeight="173.0" prefWidth="375.0">
+                     <children>
+                        <AnchorPane prefHeight="173.0" prefWidth="120.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/chest.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="41.0" layoutY="114.0" text="Chest">
+                                 <font>
+                                    <Font name="Poppins Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/shoulder.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="31.0" layoutY="115.0" text="Shoulder">
+                                 <font>
+                                    <Font name="Poppins Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="130.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/triceps.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="40.0" layoutY="114.0" text="Tricep">
+                                 <font>
+                                    <Font name="Poppins Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="250.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/stomach.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="31.0" layoutY="115.0" text="Stomach">
+                                 <font>
+                                    <Font name="Poppins Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="320.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/lats.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="36.0" layoutY="114.0" text="Lat">
+                                 <font>
+                                    <Font name="Poppins Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="423.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/thigh.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="28.0" layoutY="114.0" text="Thigh">
+                                 <font>
+                                    <Font name="Poppins Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="276.0" prefHeight="364.0" prefWidth="375.0">
+         <children>
+            <ScrollPane prefHeight="364.0" prefWidth="374.0">
+               <content>
+                  <VBox prefHeight="347.0" prefWidth="372.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="23.0" prefHeight="177.0" prefWidth="374.0" spacing="5.0">
+                                 <children>
+                                    <AnchorPane prefHeight="365.0" prefWidth="374.0">
+                                       <children>
+                                          <AnchorPane layoutY="3.0" prefHeight="47.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/bench-press.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Bench Press">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Decline%20Press.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Decline Press">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Dumbell%20Press.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Dumbbell Press">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="148.0" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Fly%20Machine.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Fly Machine">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="197.3333282470703" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/dips.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Dips">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="246.6666717529297" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Chest%20Press%20Machine.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Chest Press Machine">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="297.0" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Ab%20Roller.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="AB Roller">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="324.0" prefWidth="374.0">
+                                       <children>
+                                          <AnchorPane prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Barbell%20Military%20Press.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Barbell Military Press">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Lateral%20Raises.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Lateral Raises">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Front%20Dumbbell%20Raises.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Front Dumbbell Raises">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="363.0" prefHeight="324.0" prefWidth="374.0">
+                                       <children>
+                                          <AnchorPane prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Cable%20Tricep.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Cable Tricep">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Overhead%20Tricep.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Overhead Tricep">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Pushdown%20Tricep.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Pushdown Tricep">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="517.0" prefHeight="324.0" prefWidth="374.0">
+                                       <children>
+                                          <AnchorPane prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/pull-up.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Pull up">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/lat-pulldown-machine.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Lat pull down">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Seated%20Cable%20Row.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Seated Cable Row">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="365.0" prefWidth="374.0">
+                                       <children>
+                                          <AnchorPane layoutY="3.0" prefHeight="47.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/squat.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Squat">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Barbell%20Squat.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Barbell Squat">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Split%20Squat.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Split Squat">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="148.0" prefHeight="50.0" prefWidth="374.0">
+                                             <children>
+                                                <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/Half%20Squat.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="76.0" layoutY="15.0" text="Half Squat">
+                                                   <font>
+                                                      <Font name="Poppins Regular" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="8.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../img/add.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

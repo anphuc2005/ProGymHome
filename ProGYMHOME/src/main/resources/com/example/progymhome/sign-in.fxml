@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.SignInController">
+   <children>
+      <Label layoutX="86.0" layoutY="25.0" prefHeight="43.0" prefWidth="203.0" text="We Say Hello">
+         <font>
+            <Font name="Poppins Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="68.0" opacity="0.8" prefHeight="40.0" prefWidth="185.0" text="Welcome back! Using your username and pass word to login" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Poppins Regular" size="9.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="38.0" layoutY="270.0" opacity="0.8" prefHeight="50.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 15px;">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="passwordTextField" layoutX="38.0" layoutY="341.0" opacity="0.8" prefHeight="50.0" prefWidth="300.0" promptText="Password" style="-fx-background-radius: 15px;">
+         <font>
+            <Font name="Poppins Regular" size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="88.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/gymBG.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="onClickLogIn" layoutX="38.0" layoutY="425.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 15px; -fx-background-color: linear-gradient(to right, #92A3FD, #9DCEFF);" text="Log In" textFill="WHITE">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="73.0" layoutY="496.0" text="You don't have account?">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="onClickSignUp" layoutX="246.0" layoutY="496.0" text="Sign Up" textFill="#ef2323">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="onClickBack" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

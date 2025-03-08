@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.ProfileSetupController">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="18.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" x="70.0" y="30.0">
+         <image>
+            <Image url="@../../../img/Gym1.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="30.0" layoutY="222.0" prefHeight="237.0" prefWidth="315.0" spacing="15.0">
+         <children>
+            <TextField fx:id="nameTextField" prefHeight="48.0" prefWidth="315.0" promptText="Your Name" style="-fx-background-radius: 25px;" />
+            <DatePicker fx:id="dateOfBirthTextField" prefHeight="48.0" prefWidth="315.0" promptText="Date Of Birth" />
+            <HBox prefHeight="48.0" prefWidth="315.0">
+               <children>
+                  <TextField fx:id="weightTextField" prefHeight="48.0" prefWidth="220.0" promptText="Your Weight" style="-fx-background-radius: 25px;" />
+                  <MenuButton fx:id="weightUnit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="49.0" prefWidth="97.0" style="-fx-background-radius: 25;" text="Unit">
+                    <items>
+                      <MenuItem fx:id="menuItem" mnemonicParsing="false" text="KG" />
+                      <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Pound" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="48.0" prefWidth="315.0">
+               <children>
+                  <TextField fx:id="heightTextField" prefHeight="48.0" prefWidth="220.0" promptText="Yout Height" style="-fx-background-radius: 25;" />
+                  <MenuButton fx:id="heightUnit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="97.0" style="-fx-background-radius: 25;" text="Unit">
+                    <items>
+                      <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Cm" />
+                      <MenuItem fx:id="menuItem" mnemonicParsing="false" text="M" />
+                        <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Feet" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="52.0" layoutY="475.0" prefHeight="53.0" prefWidth="272.0">
+         <children>
+            <Label layoutY="1.0" text="Let's complete your profile">
+               <font>
+                  <Font name="Poppins Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="31.0" opacity="0.8" text="It will help us to know more about you!">
+               <font>
+                  <Font name="Inter Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="onClickNext" contentDisplay="CENTER" layoutX="73.0" layoutY="540.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="229.0" style="-fx-background-radius: 25px; -fx-background-color: linear-gradient(to right, #92A3FD, #9DCEFF);" text="Next" textFill="WHITE">
+         <font>
+            <Font name="Poppins Medium" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="onClickBack" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

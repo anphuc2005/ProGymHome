@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.HelloController">
+   <children>
+      <AnchorPane layoutY="33.0" prefHeight="375.0" prefWidth="375.0">
+         <children>
+            <ImageView fitHeight="375.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Finish.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="408.0" prefHeight="134.0" prefWidth="315.0">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="69.0" prefWidth="315.0" text="Congratulations, You have finish your workout" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Poppins Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="20.0" layoutY="60.0" opacity="0.8" prefHeight="49.0" prefWidth="275.0" text="Exercises is 30 percent,  nutrition is 70 percent, you effort is 100 percent. Total is 200 percent" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Poppins Regular" size="12.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="33.0" layoutY="572.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="315.0" style="-fx-background-radius: 99px; -fx-background-color: linear-gradient(to right, #92A3FD, #9DCEFF);" text="Get Started Again" textFill="WHITE">
+         <font>
+            <Font name="Poppins SemiBold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="640.0" prefWidth="374.0" style="-fx-background-color: linear-gradient(to right, #f8f8f8, #e0e0e0);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.PraticeScreen">
+   <children>
+      <AnchorPane layoutX="93.0" layoutY="25.0" prefHeight="47.0" prefWidth="237.0">
+         <children>
+            <Label layoutX="-1.0" prefHeight="47.0" prefWidth="238.0" style="-fx-font-family: 'Poppins';" text="Workout Programe">
+               <font>
+                  <Font name="Poppins Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="95.0" prefHeight="201.0" prefWidth="389.0">
+         <children>
+            <Label layoutX="11.0" prefHeight="36.0" prefWidth="148.0" text="Your Exercises">
+               <font>
+                  <Font name="Inter Regular" size="19.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutY="35.0" prefHeight="164.0" prefWidth="389.0" style="-fx-background-color: linear-gradient(to right, #f8f8f8, #e0e0e0);">
+               <content>
+                  <HBox prefHeight="161.0" prefWidth="373.0" spacing="10.0">
+                     <children>
+                        <AnchorPane fx:id="onClickPower" prefHeight="161.0" prefWidth="109.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/weightlifting.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="13.0" layoutY="112.0" text="PowerLifting">
+                                 <font>
+                                    <Font name="Poppins Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="onClickGym" layoutX="10.0" layoutY="10.0" prefHeight="161.0" prefWidth="109.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/workout.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="13.0" layoutY="112.0" text="BodyBuilding">
+                                 <font>
+                                    <Font name="Poppins Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="onClickCardio" layoutX="10.0" layoutY="10.0" prefHeight="161.0" prefWidth="109.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/cardio.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="24.0" layoutY="112.0" text="Cardio">
+                                 <font>
+                                    <Font name="Poppins Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="onClickCalisthenic" layoutX="10.0" layoutY="10.0" prefHeight="161.0" prefWidth="109.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/calisthenic.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="13.0" layoutY="112.0" text="Calisthenic">
+                                 <font>
+                                    <Font name="Poppins Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="onClickMeditation" layoutX="10.0" layoutY="10.0" prefHeight="161.0" prefWidth="109.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/meditation.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="13.0" layoutY="112.0" text="Meditation">
+                                 <font>
+                                    <Font name="Poppins Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="onClickCustomize" layoutX="442.0" layoutY="10.0" prefHeight="161.0" prefWidth="109.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="17.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/customize.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="13.0" layoutY="112.0" text="Customize">
+                                 <font>
+                                    <Font name="Poppins Regular" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="342.0" prefHeight="300.0" prefWidth="371.0">
+         <children>
+            <Label text="Your Sessions">
+               <font>
+                  <Font name="Inter Regular" size="19.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="scrollToLocation" fitToHeight="true" focusTraversable="false" layoutY="24.0" prefHeight="295.0" prefWidth="389.0" style="-fx-fit-to-width: true; -fx-fit-to-height: false;">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="1244.0" prefWidth="373.0" spacing="10.0">
+                     <children>
+                        <Label text="PowerLifting">
+                           <font>
+                              <Font name="Poppins Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="openWorkout" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/bench-press.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Bench Press" />
+                              <Label layoutX="85.0" layoutY="28.0" text="10x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout1" layoutX="10.0" layoutY="43.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/deadlift.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="78.0" layoutY="6.0" text="DeadLift" />
+                              <Label layoutX="88.0" layoutY="28.0" text="10x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout11" layoutX="10.0" layoutY="103.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/shoulder-press.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Shoulder Press" />
+                              <Label layoutX="85.0" layoutY="28.0" text="10x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout111" layoutX="10.0" layoutY="163.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/drink-water.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="152.0" layoutY="10.0" text="BodyBuilding">
+                           <font>
+                              <Font name="Poppins Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="openWorkout1111" layoutX="10.0" layoutY="223.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/bicep-curl.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Bicep Curl" />
+                              <Label layoutX="71.0" layoutY="27.0" text="10x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout11111" layoutX="10.0" layoutY="317.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/tricep.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Tricep Curl" />
+                              <Label layoutX="71.0" layoutY="27.0" text="10x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout111111" layoutX="10.0" layoutY="377.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/squat.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Squat" />
+                              <Label layoutX="71.0" layoutY="27.0" text="10x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout1111111" layoutX="10.0" layoutY="437.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/drink-water.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="148.0" layoutY="283.0" text="Calisthenic">
+                           <font>
+                              <Font name="Poppins Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="openWorkout11111111" layoutX="10.0" layoutY="497.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/warm-up.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Warm Up" />
+                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout111111111" layoutX="10.0" layoutY="590.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/push-up.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Push Up" />
+                              <Label layoutX="71.0" layoutY="27.0" text="20x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout1111111111" layoutX="10.0" layoutY="650.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/pull-up.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Pull Up" />
+                              <Label layoutX="71.0" layoutY="27.0" text="20x3" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout11111111111" layoutX="10.0" layoutY="710.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/drink-water.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="171.0" layoutY="557.0" text="Cardio">
+                           <font>
+                              <Font name="Poppins Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="openWorkout111111112" layoutX="10.0" layoutY="590.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/warm-up.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Warm Up" />
+                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout111111111111" layoutX="10.0" layoutY="770.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/bicycle.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Ride Bicycle" />
+                              <Label layoutX="71.0" layoutY="27.0" text="10km" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout111111111112" layoutX="10.0" layoutY="770.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/training.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Running" />
+                              <Label layoutX="71.0" layoutY="27.0" text="10km" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="openWorkout111111111113" layoutX="10.0" layoutY="770.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/drink-water.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="171.0" layoutY="830.0" text="Meditation">
+                           <font>
+                              <Font name="Poppins Regular" size="15.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="openWorkout1111111111131" layoutX="10.0" layoutY="1043.0" prefHeight="50.0" prefWidth="373.0">
+                           <children>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/meditation%20pratice.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="329.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/Icon-Next.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="66.0" layoutY="6.0" text="Meditation" />
+                              <Label layoutX="71.0" layoutY="27.0" text="30 minutes" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="onClickBack" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
