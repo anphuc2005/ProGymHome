@@ -133,7 +133,7 @@
                <content>
                   <VBox alignment="TOP_CENTER" prefHeight="1244.0" prefWidth="373.0" spacing="10.0">
                      <children>
-                        <Label text="PowerLifting">
+                        <Label fx:id="goToPower" text="PowerLifting">
                            <font>
                               <Font name="Poppins Regular" size="15.0" />
                            </font>
@@ -150,8 +150,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Bench Press" />
-                              <Label layoutX="85.0" layoutY="28.0" text="10x3" />
+                              <Label fx:id="nameSession" layoutX="66.0" layoutY="6.0" text="Bench Press" />
+                              <Label fx:id="detailSession" layoutX="85.0" layoutY="28.0" text="10x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout1" layoutX="10.0" layoutY="43.0" prefHeight="50.0" prefWidth="373.0">
@@ -166,8 +166,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="78.0" layoutY="6.0" text="DeadLift" />
-                              <Label layoutX="88.0" layoutY="28.0" text="10x3" />
+                              <Label fx:id="nameSession1" layoutX="78.0" layoutY="6.0" text="Dead Lift" />
+                              <Label fx:id="detailSession1" layoutX="88.0" layoutY="28.0" text="10x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout11" layoutX="10.0" layoutY="103.0" prefHeight="50.0" prefWidth="373.0">
@@ -182,8 +182,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Shoulder Press" />
-                              <Label layoutX="85.0" layoutY="28.0" text="10x3" />
+                              <Label fx:id="nameSession2" layoutX="66.0" layoutY="6.0" text="Shoulder Press" />
+                              <Label fx:id="detailSession2" layoutX="85.0" layoutY="28.0" text="10x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout111" layoutX="10.0" layoutY="163.0" prefHeight="50.0" prefWidth="373.0">
@@ -198,11 +198,11 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
-                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                              <Label fx:id="nameSession3" layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label fx:id="detailSession3" layoutX="71.0" layoutY="27.0" text="2 minutes" />
                            </children>
                         </Pane>
-                        <Label layoutX="152.0" layoutY="10.0" text="BodyBuilding">
+                        <Label fx:id="goToGym" layoutX="152.0" layoutY="10.0" text="BodyBuilding">
                            <font>
                               <Font name="Poppins Regular" size="15.0" />
                            </font>
@@ -219,8 +219,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Bicep Curl" />
-                              <Label layoutX="71.0" layoutY="27.0" text="10x3" />
+                              <Label fx:id="nameSession4" layoutX="66.0" layoutY="6.0" text="Bicep Curl" />
+                              <Label fx:id="detailSession4" layoutX="71.0" layoutY="27.0" text="10x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout11111" layoutX="10.0" layoutY="317.0" prefHeight="50.0" prefWidth="373.0">
@@ -235,8 +235,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Tricep Curl" />
-                              <Label layoutX="71.0" layoutY="27.0" text="10x3" />
+                              <Label fx:id="nameSession5" layoutX="66.0" layoutY="6.0" text="Tricep Curl" />
+                              <Label fx:id="detailSession5" layoutX="71.0" layoutY="27.0" text="10x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout111111" layoutX="10.0" layoutY="377.0" prefHeight="50.0" prefWidth="373.0">
@@ -251,8 +251,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Squat" />
-                              <Label layoutX="71.0" layoutY="27.0" text="10x3" />
+                              <Label fx:id="nameSession6" layoutX="66.0" layoutY="6.0" text="Squat" />
+                              <Label fx:id="detailSession6" layoutX="71.0" layoutY="27.0" text="10x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout1111111" layoutX="10.0" layoutY="437.0" prefHeight="50.0" prefWidth="373.0">
@@ -267,11 +267,11 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
-                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                              <Label fx:id="nameSession7" layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label fx:id="detailSession7" layoutX="71.0" layoutY="27.0" text="2 minutes" />
                            </children>
                         </Pane>
-                        <Label layoutX="148.0" layoutY="283.0" text="Calisthenic">
+                        <Label fx:id="goToCalis" layoutX="148.0" layoutY="283.0" text="Calisthenic">
                            <font>
                               <Font name="Poppins Regular" size="15.0" />
                            </font>
@@ -288,8 +288,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Warm Up" />
-                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                              <Label fx:id="nameSession8" layoutX="66.0" layoutY="6.0" text="Warm Up" />
+                              <Label fx:id="detailSession8" layoutX="71.0" layoutY="27.0" text="2 minutes" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout111111111" layoutX="10.0" layoutY="590.0" prefHeight="50.0" prefWidth="373.0">
@@ -304,8 +304,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Push Up" />
-                              <Label layoutX="71.0" layoutY="27.0" text="20x3" />
+                              <Label fx:id="nameSession9" layoutX="66.0" layoutY="6.0" text="Push Up" />
+                              <Label fx:id="detailSession9" layoutX="71.0" layoutY="27.0" text="20x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout1111111111" layoutX="10.0" layoutY="650.0" prefHeight="50.0" prefWidth="373.0">
@@ -320,8 +320,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Pull Up" />
-                              <Label layoutX="71.0" layoutY="27.0" text="20x3" />
+                              <Label fx:id="nameSession10" layoutX="66.0" layoutY="6.0" text="Pull Up" />
+                              <Label fx:id="detailSession10" layoutX="71.0" layoutY="27.0" text="20x3" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout11111111111" layoutX="10.0" layoutY="710.0" prefHeight="50.0" prefWidth="373.0">
@@ -336,11 +336,11 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
-                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                              <Label fx:id="nameSession11" layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label fx:id="detailSession11" layoutX="71.0" layoutY="27.0" text="2 minutes" />
                            </children>
                         </Pane>
-                        <Label layoutX="171.0" layoutY="557.0" text="Cardio">
+                        <Label fx:id="goToCardio" layoutX="171.0" layoutY="557.0" text="Cardio">
                            <font>
                               <Font name="Poppins Regular" size="15.0" />
                            </font>
@@ -357,8 +357,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Warm Up" />
-                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                              <Label fx:id="nameSession12" layoutX="66.0" layoutY="6.0" text="Warm Up" />
+                              <Label fx:id="detailSession12" layoutX="71.0" layoutY="27.0" text="2 minutes" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout111111111111" layoutX="10.0" layoutY="770.0" prefHeight="50.0" prefWidth="373.0">
@@ -373,8 +373,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Ride Bicycle" />
-                              <Label layoutX="71.0" layoutY="27.0" text="10km" />
+                              <Label fx:id="nameSession13" layoutX="66.0" layoutY="6.0" text="Ride Bicycle" />
+                              <Label fx:id="detailSession13" layoutX="71.0" layoutY="27.0" text="10km" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout111111111112" layoutX="10.0" layoutY="770.0" prefHeight="50.0" prefWidth="373.0">
@@ -389,8 +389,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Running" />
-                              <Label layoutX="71.0" layoutY="27.0" text="10km" />
+                              <Label fx:id="nameSession14" layoutX="66.0" layoutY="6.0" text="Running" />
+                              <Label fx:id="detailSession14" layoutX="71.0" layoutY="27.0" text="10km" />
                            </children>
                         </Pane>
                         <Pane fx:id="openWorkout111111111113" layoutX="10.0" layoutY="770.0" prefHeight="50.0" prefWidth="373.0">
@@ -405,11 +405,11 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Drink Water" />
-                              <Label layoutX="71.0" layoutY="27.0" text="2 minutes" />
+                              <Label fx:id="nameSession15" layoutX="66.0" layoutY="6.0" text="Drink Water" />
+                              <Label fx:id="detailSession15" layoutX="71.0" layoutY="27.0" text="2 minutes" />
                            </children>
                         </Pane>
-                        <Label layoutX="171.0" layoutY="830.0" text="Meditation">
+                        <Label fx:id="goToMeditation" layoutX="171.0" layoutY="830.0" text="Meditation">
                            <font>
                               <Font name="Poppins Regular" size="15.0" />
                            </font>
@@ -426,8 +426,8 @@
                                     <Image url="@../../../img/Icon-Next.png" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="66.0" layoutY="6.0" text="Meditation" />
-                              <Label layoutX="71.0" layoutY="27.0" text="30 minutes" />
+                              <Label fx:id="nameSession16" layoutX="66.0" layoutY="6.0" text="Meditation" />
+                              <Label fx:id="detailSession16" layoutX="71.0" layoutY="27.0" text="30 minutes" />
                            </children>
                         </Pane>
                      </children>

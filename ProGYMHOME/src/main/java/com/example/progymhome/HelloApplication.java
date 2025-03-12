@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
         loadAllFonts();
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("welcome-screen.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("customize-pratice.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 376, 640);
             stage.setTitle("ProGymHome");
             stage.setScene(scene);
@@ -26,10 +26,11 @@ public class HelloApplication extends Application {
             e.printStackTrace();
             System.out.println("Error loading FXML file.");
         }
+
     }
 
     private void loadAllFonts() {
-        URL fontDirUrl = getClass().getResource("/fonts/");
+        URL fontDirUrl = getClass().getResource("/com/example/progymhome/fonts/");
         if (fontDirUrl == null) {
             System.out.println("Font directory not found!");
             return;
@@ -41,7 +42,7 @@ public class HelloApplication extends Application {
             for (File fontFile : Objects.requireNonNull(fontDir.listFiles())) {
                 if (fontFile.getName().endsWith(".ttf") || fontFile.getName().endsWith(".otf")) {
                     try {
-                        String fontPath = "/fonts/" + fontFile.getName();
+                        String fontPath = "/com/example/progymhome/fonts/" + fontFile.getName();
                         Font font = Font.loadFont(getClass().getResource(fontPath).toExternalForm(), 20);
                         if (font != null) {
                             System.out.println("Loaded font: " + font.getName());
@@ -55,7 +56,6 @@ public class HelloApplication extends Application {
                 }
             }
         }
-
     }
 
     public static void main(String[] args) {
