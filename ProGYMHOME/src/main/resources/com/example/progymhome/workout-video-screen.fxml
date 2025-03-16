@@ -7,62 +7,58 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.WorkoutController">
+
+<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.HelloController">
    <children>
-      <AnchorPane fx:id="onPlayVideo" layoutY="30.0" prefHeight="280.0" prefWidth="400.0" />
+      <AnchorPane layoutX="6.0" layoutY="10.0" prefHeight="300.0" prefWidth="394.0" />
       <AnchorPane layoutX="-1.0" layoutY="300.0" prefHeight="340.0" prefWidth="400.0">
          <children>
-            <Label fx:id="nameLesson" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="7.0" prefHeight="52.0" prefWidth="388.0" text="Lesson Name" textAlignment="CENTER">
+            <Label contentDisplay="CENTER" layoutX="104.0" layoutY="7.0" prefHeight="52.0" prefWidth="206.0" text="Lesson Name" textAlignment="CENTER">
                <font>
                   <Font name="Poppins Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="setLesson" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="48.0" prefHeight="23.0" prefWidth="388.0" text="Set Number">
+            <Label contentDisplay="CENTER" layoutX="161.0" layoutY="48.0" text="Set Number">
                <font>
                   <Font name="Poppins Regular" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="repLesson" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="80.0" prefHeight="51.0" prefWidth="180.0" text="X20" textAlignment="CENTER">
+            <Label contentDisplay="CENTER" layoutX="175.0" layoutY="79.0" prefHeight="51.0" prefWidth="71.0" text="X20">
                <font>
                   <Font name="Poppins Bold" size="35.0" />
                </font>
             </Label>
-            <Button fx:id="onClickDone" layoutX="81.0" layoutY="146.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #93a4fe 0%, #93a4fe 100%); -fx-background-radius: 15px;" text="Done" textFill="WHITE">
+            <Button layoutX="81.0" layoutY="146.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #93a4fe 0%, #93a4fe 100%);" text="Done" textFill="WHITE">
                <font>
                   <Font name="Poppins Bold" size="20.0" />
                </font>
             </Button>
-            <ImageView fx:id="onClickPlay" fitHeight="60.0" fitWidth="60.0" layoutX="175.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="175.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/play.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="onClickBack10s" fitHeight="40.0" fitWidth="40.0" layoutX="111.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="111.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/rewind.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="onClickForward10s" fitHeight="40.0" fitWidth="40.0" layoutX="261.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="261.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/fast-forward.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="onClickNext" fitHeight="35.0" fitWidth="35.0" layoutX="312.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="312.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../img/next.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="onClickBack" fitHeight="30.0" fitWidth="30.0" layoutX="68.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="68.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../img/back video.png" />
+                  <Image url="@../../../img/back%20video.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fx:id="returnScreen" fitHeight="30.0" fitWidth="30.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/Back.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
