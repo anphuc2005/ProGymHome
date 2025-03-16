@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
@@ -11,8 +9,6 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-
-
 <AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.AddLessonController">
    <children>
       <Label layoutX="104.0" layoutY="14.0" text="Your Lessions">
@@ -46,15 +42,10 @@
             <Image url="@../../../img/gymBG.png" />
          </image>
       </ImageView>
-      <ScrollPane layoutY="264.0" prefHeight="280.0" prefWidth="376.0">
+      <ScrollPane layoutY="264.0" prefHeight="376.0" prefWidth="376.0">
          <content>
-            <VBox prefHeight="280.0" prefWidth="376.0" />
+            <VBox fx:id="lessonContainer" prefHeight="359.0" prefWidth="376.0" spacing="10.0" />
          </content>
       </ScrollPane>
-      <Button layoutX="68.0" layoutY="574.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="240.0" style="-fx-background-radius: 15px; -fx-background-color: linear-gradient(to right, #93a4fe 0%, #be95be 100%);" text="Let's Started" textFill="WHITE">
-         <font>
-            <Font name="Poppins Bold" size="17.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

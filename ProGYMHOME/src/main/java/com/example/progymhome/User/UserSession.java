@@ -5,6 +5,9 @@ public class UserSession {
     private String detailPratice;
     private Integer repLesson;
     private Integer setLesson;
+    private Double time;
+    private static UserSession instance;
+    public UserSession() {}
     private static UserSession instance;
     private UserSession() {}
     public static UserSession getInstance()
@@ -30,8 +33,13 @@ public class UserSession {
     public void setDetailPratice(String detailPratice) {
         this.detailPratice = detailPratice;
     }
+    public Double getTime() {
+        return time;
+    }
 
-
+    public void setTime(Double time) {
+        this.time = time;
+    }
 
     public String[] splitString() {
         if (detailPratice != null && detailPratice.matches(".*\\S+\\s*[xX]\\s*\\S+.*")) {

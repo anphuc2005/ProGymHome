@@ -11,7 +11,25 @@ public enum LessonLink {
     PULL_UP("aAggnpPyR6E"),
     CHILLING("JYNa_9pYLGw"),
     WARM_UP("-p0PA9Zt8zk"),
+    MEDITATION("uwEaQk5VeS4"),
+    DECLINE_PRESS("Kxt_5D2Rpgg"),
+    FLY_MACHINE("sAeDw6xhFFw"),
+    DIPS("o2qX3Zb5mvg"),
+    CHEST_PRESS_MACHINE("vnd-GBtTMLI"),
+    AB_ROLLER("zCsW9L2qi-0"),
+    BARBELL_MILITARY_PRESS("cGnhixvC8uA"),
+    LATERRAL_RAISES("XPPfnSEATJA"),
+    FRONT_DUMBBELL_RAISES("5CECBjd7HLQ"),
+    CABLE_TRICEP("6Fzep104f0s"),
+    OVERHEAD_TRICEP("1u18yJELsh0"),
+    PUSHDOWN_TRICEP("m_UlDFNX4mk"),
+    LAT_PULL_DOWN("NAIEnMjN-6w"),
+    SEATED_CABLE_ROW("UCXxvVItLoM"),
+    BARBELL_SQUAT("-bJIpOq-LWk"),
+    SPLIT_SQUAT("hXpGSa5HYqY"),
+    HALF_SQUAT("njgjIZdpl50");
     MEDITATION("uwEaQk5VeS4");
+
 
     private final String videoID;
 

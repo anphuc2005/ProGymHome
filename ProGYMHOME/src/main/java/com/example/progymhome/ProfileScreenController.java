@@ -6,7 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.progymhome.User.UserDetail;
-import javafx.event.ActionEvent;
+import com.example.progymhome.User.UserManager;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -59,13 +59,26 @@ public class ProfileScreenController {
     private Label upLoadImage;
 
     private UserDetail user;
+    private UserManager userManager;
+    public static String userName;
     @FXML
     void initialize() {
+        System.out.println("abc");
             user = user.getInstance();
+            userManager = userManager.getInstance();
+//            setNameTextFIeld.setText(user.getName());
+//            setWeightUser.setText(user.getWeight() + user.getWeightUnit());
+//            setHeightUser.setText(user.getHeight() + user.getHeightUnit());
+//            setAgeUser.setText(user.getAge() + "y0");
+            user = userManager.findUser(userName);
+        System.out.println(user);
+        if (user != null) {
             setNameTextFIeld.setText(user.getName());
             setWeightUser.setText(user.getWeight() + user.getWeightUnit());
             setHeightUser.setText(user.getHeight() + user.getHeightUnit());
-            setAgeUser.setText(user.getAge() + "y0");
+            setAgeUser.setText(user.getAge() + " years");
+        }
+
             upLoadImage.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
@@ -94,6 +107,18 @@ public class ProfileScreenController {
                     }
                 }
             });
+            onClickProgress.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    try
+                    {
+                        SwitchScreenController.switchToScene1(mouseEvent, "user-progress-screen.fxml");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+
     }
     public void upImage(MouseEvent event)
     {

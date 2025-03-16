@@ -11,9 +11,9 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.CustomizeController">
    <children>
-      <AnchorPane layoutX="30.0" prefHeight="47.0" prefWidth="315.0">
+      <AnchorPane layoutX="47.0" prefHeight="47.0" prefWidth="298.0">
          <children>
-            <Label layoutY="12.0" prefHeight="28.0" prefWidth="177.0" text="Workout Lessons">
+            <Label layoutX="36.0" layoutY="10.0" prefHeight="28.0" prefWidth="177.0" text="Workout Lessons">
                <font>
                   <Font name="Poppins Bold" size="20.0" />
                </font>
@@ -545,5 +545,10 @@
             </ScrollPane>
          </children>
       </AnchorPane>
+      <ImageView fx:id="onClickBack" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Back.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -4,10 +4,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+import com.example.progymhome.User.UserListSession;
 import com.example.progymhome.User.UserSession;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -51,6 +56,12 @@ public class SetRepAndSetController {
     private TextField setTextField;
 
     private UserSession userSession;
+    private UserListSession userListSession;
+    private Stage newStage;
+    @FXML
+    void initialize() {
+        userSession = userSession.getInstance();
+        userListSession= userListSession.getInstance();
     @FXML
     void initialize() {
         userSession = userSession.getInstance();
@@ -69,6 +80,41 @@ public class SetRepAndSetController {
         onClickOK.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                try {
+
+                    UserSession newUserSession = new UserSession();
+
+
+                    newUserSession.setDetailPratice(setTextField.getText() + "x" + repTextField.getText());
+                    System.out.println(setTextField.getText() + " " + repTextField.getText());
+                    newUserSession.setNamePratice(userSession.getNamePratice());
+
+
+                    userListSession.addUserSession(newUserSession);
+
+
+                    Stage stage = (Stage) onClickClose.getScene().getWindow();
+                    stage.close();
+
+                    if(newStage == null || !newStage.isShowing())
+                    {
+                        System.out.println("abc");
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("add-screen.fxml"));
+                        Parent root = loader.load();
+
+                        newStage = new Stage();
+                        Scene scene = new Scene(root);
+                        newStage.setScene(scene);
+                        newStage.show();
+                    }
+                    else
+                    {
+                        System.out.println("xyz");
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("add-screen.fxml"));
+                        Parent root = loader.load();
+
+                        newStage.getScene().setRoot(root);
+                    }
                 try
                 {
                     userSession.setDetailPratice(setTextField.getText() + "x" + repTextField.getText());

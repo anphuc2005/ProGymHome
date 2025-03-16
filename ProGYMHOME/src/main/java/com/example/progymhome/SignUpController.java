@@ -77,10 +77,13 @@ public class SignUpController {
                 }
                 else
                 {
-                    user = user.getInstance();
+                    user = new UserDetail();
                     user.setUsername(usernameTextField.getText());
                     user.setPassword(passwordTextField.getText());
+                    ProfileSetupController.userName = user.getUsername();
                     userManager.addUser(user);
+                    userManager.saveToFile("src/main/java/com/example/progymhome/User/userData.json");
+                    userManager.loadFromFile("src/main/java/com/example/progymhome/User/userData.json");
                     userExist = false;
                 }
                 try

@@ -4,7 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+import com.example.progymhome.Screen.ScreenBackManager;
+import com.example.progymhome.User.UserListSession;
 import com.example.progymhome.User.UserSession;
+import javafx.event.EventHandler;
+
+import com.example.progymhome.User.UserSession;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -218,11 +225,15 @@ public class PraticeScreen {
 
 
     private UserSession userSession;
+    private UserListSession userListSession;
+
 
     @FXML
     void initialize() {
 
         userSession = UserSession.getInstance();
+        userListSession = userListSession.getInstance();
+
 
 
         Pane[] workoutPanes = {
@@ -245,9 +256,25 @@ public class PraticeScreen {
             if (workoutPanes[i] != null) {
                 int finalI = i;
                 workoutPanes[i].setOnMouseClicked(event -> {
+                    // Tạo đối tượng UserSession mới
+                    UserSession newUserSession = new UserSession();
+
+                    // Thiết lập các giá trị cho đối tượng UserSession mới
+                    newUserSession.setNamePratice(nameLabel[finalI].getText());
+                    newUserSession.setDetailPratice(detailLabel[finalI].getText());
                     userSession.setNamePratice(nameLabel[finalI].getText());
                     userSession.setDetailPratice(detailLabel[finalI].getText());
                     handleWorkoutClick(event);
+
+                    // Thêm đối tượng UserSession mới vào UserListSession
+                    newUserSession.setTime(WorkoutController.time);
+                    userListSession.addUserSession(newUserSession);
+
+                    // Xử lý sự kiện click
+                    userSession.setNamePratice(nameLabel[finalI].getText());
+                    userSession.setDetailPratice(detailLabel[finalI].getText());
+                    handleWorkoutClick(event);
+
                 });
             }
         }
@@ -265,11 +292,25 @@ public class PraticeScreen {
                 throw new RuntimeException(e);
             }
         });
+        onClickBack.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try
+                {
+                    SwitchScreenController.switchToScene1(mouseEvent,"profile-screen.fxml");
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        });
     }
 
 
     private void handleWorkoutClick(MouseEvent event) {
         try {
+            ScreenBackManager.pushScreen("pratice-screen.fxml");
+
             SwitchScreenController.switchToScene1(event, "workout-video-screen.fxml");
         } catch (IOException e) {
             e.printStackTrace();

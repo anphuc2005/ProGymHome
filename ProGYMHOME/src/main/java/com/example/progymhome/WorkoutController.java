@@ -5,12 +5,20 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.progymhome.Lesson.LessonLink;
+import com.example.progymhome.Screen.ScreenBackManager;
+import com.example.progymhome.User.UserListSession;
+import com.example.progymhome.User.UserSession;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import com.example.progymhome.User.UserSession;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
 
@@ -60,11 +68,14 @@ public class WorkoutController {
     private UserSession userSession;
     private String[] part;
     private String videoID;
+    private UserListSession userListSession;
+    public static double time;
 
     @FXML
     void initialize() {
-
-        userSession = UserSession.getInstance();
+        long startTime = System.currentTimeMillis();
+        userSession = userSession.getInstance();
+        userListSession = userListSession.getInstance();
         nameLesson.setText(userSession.getNamePratice());
         videoID = getVideoIDFromLesson(nameLesson.getText());
         System.out.println(videoID);
@@ -83,7 +94,6 @@ public class WorkoutController {
             repLesson.setText(part[0] + " reps");
         }
 
-        // Sự kiện cho nút play/pause
         onClickPlay.setOnMouseClicked(event -> {
             if (!isPlaying) {
                 executeJS("playVideo()");
@@ -98,14 +108,47 @@ public class WorkoutController {
 
         onClickBack10s.setOnMouseClicked(event -> executeJS("rewindVideo()"));
         onClickForward10s.setOnMouseClicked(event -> executeJS("forwardVideo()"));
+
+
         returnScreen.setOnMouseClicked(event -> {
             try {
+
                 executeJS("pauseVideo()");
-                SwitchScreenController.switchToScene1(event, "pratice-screen.fxml");
+                String backScreen = ScreenBackManager.popScreen();
+                if(backScreen != null)
+                {
+                    System.out.println(backScreen);
+                    SwitchScreenController.switchToScene1(event, backScreen);
+                }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
+        onClickDone.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                long endTime = System.currentTimeMillis();
+                time = (endTime - startTime) /60000.0;
+//                userSession.setTime(lessionTime);
+                System.out.println(time);
+                try {
+                    executeJS("pauseVideo()");
+                    String backScreen = ScreenBackManager.popScreen();
+                    if(backScreen != null)
+                    {
+                        System.out.println(backScreen);
+                        SwitchScreenController.switchToScene1(mouseEvent, backScreen);
+                    }
+
+
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+
+
     }
 
     private void setUpWebView(String videoLink) {
