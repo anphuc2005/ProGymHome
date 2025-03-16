@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 import com.example.progymhome.User.UserListSession;
 import com.example.progymhome.User.UserSession;
 import javafx.event.ActionEvent;
@@ -61,6 +62,9 @@ public class SetRepAndSetController {
     void initialize() {
         userSession = userSession.getInstance();
         userListSession= userListSession.getInstance();
+    @FXML
+    void initialize() {
+        userSession = userSession.getInstance();
         repTextField.setText("0");
         setTextField.setText("0");
         nameLesson.setText(userSession.getNamePratice());
@@ -111,15 +115,18 @@ public class SetRepAndSetController {
 
                         newStage.getScene().setRoot(root);
                     }
-
-
+                try
+                {
+                    userSession.setDetailPratice(setTextField.getText() + "x" + repTextField.getText());
+                    System.out.println(setTextField.getText() + " " + repTextField.getText());
+                    Stage stage = (Stage) onClickClose.getScene().getWindow();
+                    stage.close();
+                    SwitchScreenController.openNewWindow(actionEvent, "add-screen.fxml", 376,640);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
         });
-
-
         onRepIncrease.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {

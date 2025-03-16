@@ -8,6 +8,8 @@ public class UserSession {
     private Double time;
     private static UserSession instance;
     public UserSession() {}
+    private static UserSession instance;
+    private UserSession() {}
     public static UserSession getInstance()
     {
         if(instance == null)
@@ -31,7 +33,6 @@ public class UserSession {
     public void setDetailPratice(String detailPratice) {
         this.detailPratice = detailPratice;
     }
-
     public Double getTime() {
         return time;
     }

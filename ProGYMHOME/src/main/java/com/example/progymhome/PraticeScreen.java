@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 import com.example.progymhome.Screen.ScreenBackManager;
 import com.example.progymhome.User.UserListSession;
 import com.example.progymhome.User.UserSession;
 import javafx.event.EventHandler;
+
+import com.example.progymhome.User.UserSession;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -223,11 +227,13 @@ public class PraticeScreen {
     private UserSession userSession;
     private UserListSession userListSession;
 
+
     @FXML
     void initialize() {
 
         userSession = UserSession.getInstance();
         userListSession = userListSession.getInstance();
+
 
 
         Pane[] workoutPanes = {
@@ -265,6 +271,9 @@ public class PraticeScreen {
                     userListSession.addUserSession(newUserSession);
 
                     // Xử lý sự kiện click
+                    userSession.setNamePratice(nameLabel[finalI].getText());
+                    userSession.setDetailPratice(detailLabel[finalI].getText());
+                    handleWorkoutClick(event);
 
                 });
             }
@@ -292,6 +301,7 @@ public class PraticeScreen {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+
             }
         });
     }
@@ -300,6 +310,7 @@ public class PraticeScreen {
     private void handleWorkoutClick(MouseEvent event) {
         try {
             ScreenBackManager.pushScreen("pratice-screen.fxml");
+
             SwitchScreenController.switchToScene1(event, "workout-video-screen.fxml");
         } catch (IOException e) {
             e.printStackTrace();

@@ -12,6 +12,8 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import com.example.progymhome.User.UserSession;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -92,7 +94,6 @@ public class WorkoutController {
             repLesson.setText(part[0] + " reps");
         }
 
-
         onClickPlay.setOnMouseClicked(event -> {
             if (!isPlaying) {
                 executeJS("playVideo()");
@@ -108,6 +109,7 @@ public class WorkoutController {
         onClickBack10s.setOnMouseClicked(event -> executeJS("rewindVideo()"));
         onClickForward10s.setOnMouseClicked(event -> executeJS("forwardVideo()"));
 
+
         returnScreen.setOnMouseClicked(event -> {
             try {
 
@@ -118,8 +120,6 @@ public class WorkoutController {
                     System.out.println(backScreen);
                     SwitchScreenController.switchToScene1(event, backScreen);
                 }
-
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -200,5 +200,4 @@ public class WorkoutController {
         }
         return "defaultVideoID";
     }
-
 }
