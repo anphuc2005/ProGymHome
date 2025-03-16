@@ -7,6 +7,7 @@ import java.time.Period;
 import java.util.ResourceBundle;
 
 import com.example.progymhome.User.UserDetail;
+import com.example.progymhome.User.UserManager;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -51,6 +52,8 @@ public class ProfileSetupController {
 
 
     private UserDetail user;
+    private UserManager userManager;
+    public static String userName;
     @FXML
     void initialize() {
         for(MenuItem item : weightUnit.getItems())
@@ -73,7 +76,8 @@ public class ProfileSetupController {
             }
         });
 
-        user = user.getInstance();
+        userManager=userManager.getInstance();
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         onClickNext.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -87,17 +91,24 @@ public class ProfileSetupController {
                 }
                 else
                 {
-                    user.setDateOfBirth(dateOfBirthTextField.getValue());
-                    user.setName(nameTextField.getText());
-                    user.setWeight(weightTextField.getText());
-                    user.setHeight(heightTextField.getText());
-                    user.setWeightUnit(weightUnit.getText());
-                    user.setHeightUnit(heightUnit.getText());
-                    LocalDate now = LocalDate.now();
-                    int age = Period.between(dateOfBirthTextField.getValue(), now).getYears();
-                    user.setAge(age);
+                    user = userManager.findUser(userName);
+                    if (user != null)
+                    {
+                        user.setDateOfBirth(dateOfBirthTextField.getValue());
+                        user.setName(nameTextField.getText());
+                        user.setWeight(weightTextField.getText());
+                        user.setHeight(heightTextField.getText());
+                        user.setWeightUnit(weightUnit.getText());
+                        user.setHeightUnit(heightUnit.getText());
+                        LocalDate now = LocalDate.now();
+                        int age = Period.between(dateOfBirthTextField.getValue(), now).getYears();
+                        user.setAge(age);
 //                    System.out.println(user.getUsername() + " " + user.getWeight() + user.getWeightUnit() + " " + user.getHeight() + user.getHeightUnit() + " " + user.getPassword() + " " + user.getPhoneNumber() + " " + user.getAge());
-
+                        UserManager userManager = UserManager.getInstance();
+                        userManager.loadFromFile("src/main/java/com/example/progymhome/User/userData.json");
+                        userManager.updateUser(user, "src/main/java/com/example/progymhome/User/userData.json");
+                        ProfileScreenController.userName = user.getUsername();
+                    }
 
 
                 }

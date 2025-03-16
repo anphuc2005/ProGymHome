@@ -81,6 +81,7 @@ public class SignInController {
                     else
                     {
                         try {
+
                             SwitchScreenController.switchToScene(actionEvent, "profile-screen.fxml");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
