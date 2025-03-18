@@ -1,7 +1,6 @@
 package com.example.progymhome;
 
 import java.io.IOException;
-
 import com.example.exfxwebview.WebView;
 import com.example.progymhome.User.UserSession;
 import javafx.event.EventHandler;
@@ -162,7 +161,6 @@ public class CustomizeController {
 
     @FXML
     private ImageView onClickBack;
-
     private WebView webView;
     private String[] part;
     private String videoID;

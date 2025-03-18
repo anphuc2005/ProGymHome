@@ -1,5 +1,6 @@
 package com.example.progymhome;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,13 +38,16 @@ public class AddLessonController {
     private Button onClickStarted;
     private UserSession userSession;
     private UserListSession userListSession;
+
     private UserManager userManager;
+
     private String[] part;
     private ScreenBackManager screenBackManager;
 
 
     @FXML
     void initialize() {
+
         userManager.loadFromFile("src/main/java/com/example/progymhome/User/userData.json");
 
         userSession = userSession.getInstance();
@@ -96,6 +100,7 @@ public class AddLessonController {
     }
 
     public void populateLessons() {
+
             UserListSession userListSession1 = userManager.getUserListSessions();
         for (UserSession user : userListSession1.getUsers()) {
             System.out.println(user.getNamePratice() + " " + user.getDetailPratice());
@@ -133,3 +138,4 @@ public class AddLessonController {
         return lessonName;
     }
 }
+

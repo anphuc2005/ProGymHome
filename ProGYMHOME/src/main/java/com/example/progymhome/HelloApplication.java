@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
         loadAllFonts();
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("welcome-screen.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("customize-pratice.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 376, 640);
             stage.setTitle("ProGymHome");
             stage.setScene(scene);

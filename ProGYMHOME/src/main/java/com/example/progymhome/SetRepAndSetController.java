@@ -122,8 +122,6 @@ public class SetRepAndSetController {
                 }
             }
         });
-
-
         onRepIncrease.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {

@@ -107,6 +107,7 @@ public class ProfileSetupController {
                         user.setWeightUnit(weightUnit.getText());
                         user.setHeightUnit(heightUnit.getText());
                         user.changeWeightAndHeight();
+
                         LocalDate now = LocalDate.now();
                         int age = Period.between(dateOfBirthTextField.getValue(), now).getYears();
                         user.setAge(age);
@@ -116,7 +117,6 @@ public class ProfileSetupController {
                         userManager.updateUser(user, "src/main/java/com/example/progymhome/User/userData.json");
                         ProfileScreenController.userName = user.getUsername();
                     }
-
 
 
                 }

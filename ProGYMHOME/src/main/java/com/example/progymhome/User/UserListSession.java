@@ -27,8 +27,6 @@ public class UserListSession {
         return users;
     }
 
-
-
     public void setUsers(ArrayList<UserSession> users) {
         this.users = users;
     }

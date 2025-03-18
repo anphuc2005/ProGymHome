@@ -31,7 +31,6 @@ public class UserSession {
     public void setDetailPratice(String detailPratice) {
         this.detailPratice = detailPratice;
     }
-
     public Double getTime() {
         return time;
     }

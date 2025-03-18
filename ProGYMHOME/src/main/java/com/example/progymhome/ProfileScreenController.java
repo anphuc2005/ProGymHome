@@ -130,6 +130,7 @@ public class ProfileScreenController {
                 }
             });
 
+
     }
     public void upImage(MouseEvent event)
     {

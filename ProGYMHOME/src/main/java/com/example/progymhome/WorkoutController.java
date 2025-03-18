@@ -92,7 +92,6 @@ public class WorkoutController {
             repLesson.setText(part[0] + " reps");
         }
 
-
         onClickPlay.setOnMouseClicked(event -> {
             if (!isPlaying) {
                 executeJS("playVideo()");
@@ -118,8 +117,6 @@ public class WorkoutController {
                     System.out.println(backScreen);
                     SwitchScreenController.switchToScene1(event, backScreen);
                 }
-
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
