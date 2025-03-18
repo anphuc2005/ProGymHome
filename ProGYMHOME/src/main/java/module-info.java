@@ -12,7 +12,6 @@ module com.example.progymhome {
     requires org.kordamp.bootstrapfx.core;
     requires com.google.gson;
 
-
     opens com.example.progymhome to javafx.fxml;
     exports com.example.progymhome;
 
@@ -21,5 +20,4 @@ module com.example.progymhome {
     exports com.example.progymhome.Screen;
     opens com.example.progymhome.Screen to javafx.fxml;
     opens com.example.progymhome.User to com.google.gson;
-
 }

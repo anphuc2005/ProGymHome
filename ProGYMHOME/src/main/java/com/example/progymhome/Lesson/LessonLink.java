@@ -28,7 +28,7 @@ public enum LessonLink {
     BARBELL_SQUAT("-bJIpOq-LWk"),
     SPLIT_SQUAT("hXpGSa5HYqY"),
     HALF_SQUAT("njgjIZdpl50");
-    MEDITATION("uwEaQk5VeS4");
+
 
 
     private final String videoID;

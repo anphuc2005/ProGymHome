@@ -96,10 +96,18 @@ public class ProfileSetupController {
                     {
                         user.setDateOfBirth(dateOfBirthTextField.getValue());
                         user.setName(nameTextField.getText());
-                        user.setWeight(weightTextField.getText());
-                        user.setHeight(heightTextField.getText());
+                        if(user.isValidDigit(weightTextField.getText()) && user.isValidDigit(heightTextField.getText()))
+                        {
+                            double weight = Double.parseDouble(weightTextField.getText());
+                            double height = Double.parseDouble(heightTextField.getText());
+                            user.setWeight(weight);
+                            user.setHeight(height);
+                        }
+
                         user.setWeightUnit(weightUnit.getText());
                         user.setHeightUnit(heightUnit.getText());
+                        user.changeWeightAndHeight();
+
                         LocalDate now = LocalDate.now();
                         int age = Period.between(dateOfBirthTextField.getValue(), now).getYears();
                         user.setAge(age);

@@ -14,10 +14,12 @@ import java.util.ArrayList;
 public class UserManager {
     private static UserManager instance;
     private ArrayList<UserDetail> users;
+    private UserListSession userListSessions;
 
     public UserManager()
     {
         this.users = new ArrayList<>();
+        this.userListSessions = new UserListSession();
     }
     public static UserManager getInstance()
     {
@@ -36,6 +38,12 @@ public class UserManager {
 
         String temp = gson.toJson(users);
         System.out.println(temp);
+    }
+
+    public void addUserListSession (UserListSession user)
+    {
+        this.userListSessions = user;
+        saveUserToFile("src/main/java/com/example/progymhome/User/userListSessions.json");
     }
     public void saveToFile(String fileName) {
         Gson gson = new GsonBuilder()
@@ -95,4 +103,42 @@ public class UserManager {
         }
         return false;
     }
+
+    public UserListSession getUserListSessions() {
+        loadUserFromFile("src/main/java/com/example/progymhome/User/userListSessions.json");
+        return userListSessions;
+    }
+
+    public void setUserListSessions(UserListSession userListSessions) {
+        this.userListSessions = userListSessions;
+        saveUserToFile("src/main/java/com/example/progymhome/User/userListSessions.json");
+    }
+
+    public void saveUserToFile(String fileName) {
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDate.class, new LocalDateJson())
+                .create();
+        try (FileWriter writer = new FileWriter(fileName)) {
+            // Lưu dữ liệu của userListSessions vào file
+            gson.toJson(userListSessions, writer);
+            System.out.println("Dữ liệu đã được lưu vào file " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadUserFromFile(String fileName) {
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(LocalDate.class, new LocalDateJson())
+                .create();
+        try (FileReader reader = new FileReader(fileName)) {
+            // Đảm bảo rằng bạn đọc vào đối tượng UserListSession
+            Type userListSessionType = new TypeToken<UserListSession>(){}.getType();
+            userListSessions = gson.fromJson(reader, userListSessionType);
+            System.out.println("Dữ liệu đã được tải từ file " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

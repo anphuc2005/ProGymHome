@@ -38,7 +38,7 @@ public class ProfileScreenController {
     private ImageView onClickProgress;
 
     @FXML
-    private ImageView onClickSetUp;
+    private ImageView onClickLogout;
 
     @FXML
     private Text setAgeUser;
@@ -118,6 +118,18 @@ public class ProfileScreenController {
                     }
                 }
             });
+            onClickLogout.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    try
+                    {
+                        SwitchScreenController.switchToScene1(mouseEvent,"sign-in.fxml");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+
 
     }
     public void upImage(MouseEvent event)

@@ -149,9 +149,9 @@
                   <Image url="@../../../img/8666609_user_icon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="onClickSetUp" fitHeight="24.0" fitWidth="24.0" layoutX="410.0" layoutY="10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="onClickLogout" fitHeight="20.0" fitWidth="20.0" layoutX="410.0" layoutY="10.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../img/8666615_settings_icon.png" />
+                  <Image url="@../../../img/logout.png" />
                </image>
             </ImageView>
          </children>

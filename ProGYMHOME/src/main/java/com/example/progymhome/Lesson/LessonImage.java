@@ -21,7 +21,10 @@ public enum LessonImage {
     SQUAT("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\squat.png"),
     BARBELL_SQUAT("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\Barbell Squat.png"),
     SPLIT_SQUAT("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\Split Squat.png"),
-    HALF_SQUAT("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\Half Squat.png");
+    HALF_SQUAT("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\Half Squat.png"),
+    SHOULDER_PRESS("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\shoulder-press.png"),
+    BICEP_CURL("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\bicep-curl.png"),
+    TRICEP_CURL("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\resources\\img\\tricep.png");
 
     private final String linkImage;
 

@@ -1,19 +1,12 @@
 package com.example.progymhome;
 
 import java.io.IOException;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-
-
 import com.example.exfxwebview.WebView;
 import com.example.progymhome.User.UserSession;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
 import javafx.scene.image.ImageView;
-
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -166,11 +159,8 @@ public class CustomizeController {
     @FXML
     private AnchorPane squat;
 
-
     @FXML
     private ImageView onClickBack;
-
-
     private WebView webView;
     private String[] part;
     private String videoID;
@@ -191,7 +181,6 @@ public class CustomizeController {
                 nameSession19,nameSession20
         };
 
-
         onClickBack.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -203,7 +192,6 @@ public class CustomizeController {
                 }
             }
         });
-
 
         for (int i = 0 ; i <workoutPane.length ; ++i)
         {

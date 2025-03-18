@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import com.example.progymhome.Lesson.LessonImage;
 import com.example.progymhome.Screen.ScreenBackManager;
 import com.example.progymhome.User.UserListSession;
+import com.example.progymhome.User.UserManager;
 import com.example.progymhome.User.UserSession;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -37,14 +38,22 @@ public class AddLessonController {
     private Button onClickStarted;
     private UserSession userSession;
     private UserListSession userListSession;
+
+    private UserManager userManager;
+
     private String[] part;
     private ScreenBackManager screenBackManager;
 
 
     @FXML
     void initialize() {
+
+        userManager.loadFromFile("src/main/java/com/example/progymhome/User/userData.json");
+
         userSession = userSession.getInstance();
-        userListSession = userListSession.getInstance();
+        userManager = userManager.getInstance();
+        userListSession = userManager.getUserListSessions();
+        System.out.println(userListSession);
         populateLessons();
 
 
@@ -92,7 +101,8 @@ public class AddLessonController {
 
     public void populateLessons() {
 
-        for (UserSession user : userListSession.getUsers()) {
+            UserListSession userListSession1 = userManager.getUserListSessions();
+        for (UserSession user : userListSession1.getUsers()) {
             System.out.println(user.getNamePratice() + " " + user.getDetailPratice());
             userSession.setNamePratice(user.getNamePratice());
             userSession.setDetailPratice(user.getDetailPratice());
@@ -127,5 +137,5 @@ public class AddLessonController {
         }
         return lessonName;
     }
-
+}
 

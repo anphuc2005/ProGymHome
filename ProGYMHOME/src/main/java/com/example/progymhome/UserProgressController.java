@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import com.example.progymhome.Lesson.LessonImage;
 import com.example.progymhome.User.UserListSession;
+import com.example.progymhome.User.UserManager;
 import com.example.progymhome.User.UserSession;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -44,24 +45,26 @@ public class UserProgressController {
 
     private UserSession userSession;
     private UserListSession userListSession;
+    private UserManager userManager;
     private String[] part;
     private int totalExercise;
     private double totalTimeSession = 0;
+
     @FXML
     void initialize() {
-            userSession = userSession.getInstance();
-            userListSession = userListSession.getInstance();
-        for (UserSession user : userListSession.getUsers()) {
-            System.out.println(user.getNamePratice() + " " + user.getDetailPratice());
-        }
-            populateLessons();
+        userSession = userSession.getInstance();
+        userManager = userManager.getInstance();
+        userListSession = userManager.getUserListSessions();
+//        for (UserSession user : userListSession.getUsers()) {
+//            System.out.println(user.getNamePratice() + " " + user.getDetailPratice());
+//        }
+        populateLessons();
         numExercises.setText(totalExercise + " Exercises");
-        totalTime.setText(String.format("%.2f Minutes", totalTimeSession));
+        totalTime.setText(String.format("%.2f Minutes", totalTimeSession += WorkoutController.time));
         onClickBack.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                try
-                {
+                try {
                     SwitchScreenController.switchToScene1(mouseEvent, "profile-screen.fxml");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -72,8 +75,7 @@ public class UserProgressController {
 
     }
 
-    public void addLessonToVbox(String name, String set, String rep)
-    {
+    public void addLessonToVbox(String name, String set, String rep) {
         HBox lessonPane = new HBox();
         lessonPane.setSpacing(10);
         lessonPane.setPadding(new Insets(10));
@@ -97,6 +99,7 @@ public class UserProgressController {
         lessonPane.setAlignment(Pos.CENTER_LEFT);
         this.addSession.getChildren().add(lessonPane);
     }
+
     public void populateLessons() {
 
         for (UserSession user : userListSession.getUsers()) {
@@ -106,7 +109,7 @@ public class UserProgressController {
             userSession.setDetailPratice(user.getDetailPratice());
             userSession.setTime(user.getTime());
             System.out.println(user.getTime());
-            totalTimeSession += userSession.getTime();
+//            totalTimeSession += userSession.getTime();
             part = user.splitString();
             String name = user.getNamePratice();
             String set = "", rep = "";
@@ -122,18 +125,14 @@ public class UserProgressController {
             addLessonToVbox(name, set, rep);
         }
     }
-    private String getImageVideo(String lessonName)
-    {
-        for(LessonImage lesson : LessonImage.values())
-        {
+
+    private String getImageVideo(String lessonName) {
+        for (LessonImage lesson : LessonImage.values()) {
             String name = lessonName.replace(" ", "_").toUpperCase();
             System.out.println(name);
-            if(lesson.name().equals(name))
-            {
+            if (lesson.name().equals(name)) {
                 return lesson.getLinkImage();
-            }
-            else
-            {
+            } else {
                 System.out.println("No machting found" + lessonName);
             }
         }
