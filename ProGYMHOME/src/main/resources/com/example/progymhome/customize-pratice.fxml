@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.HelloController">
+<AnchorPane prefHeight="640.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progymhome.CustomizeController">
    <children>
-      <AnchorPane layoutX="30.0" prefHeight="47.0" prefWidth="315.0">
+      <AnchorPane layoutX="47.0" prefHeight="47.0" prefWidth="298.0">
          <children>
-            <Label layoutY="12.0" prefHeight="28.0" prefWidth="177.0" text="Workout Lessons">
+            <Label layoutX="36.0" layoutY="10.0" prefHeight="28.0" prefWidth="177.0" text="Workout Lessons">
                <font>
                   <Font name="Poppins Bold" size="20.0" />
                </font>
@@ -36,7 +36,7 @@
                <content>
                   <HBox prefHeight="173.0" prefWidth="375.0">
                      <children>
-                        <AnchorPane prefHeight="173.0" prefWidth="120.0">
+                        <AnchorPane fx:id="onClickChest" prefHeight="173.0" prefWidth="120.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -50,7 +50,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                        <AnchorPane fx:id="onClickShoulder" layoutX="10.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -64,7 +64,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="130.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                        <AnchorPane fx:id="goToTricep" layoutX="130.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -78,7 +78,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="250.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                        <AnchorPane fx:id="onClickStomach" layoutX="250.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -92,7 +92,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="320.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                        <AnchorPane fx:id="goToLat" layoutX="320.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -106,7 +106,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="423.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
+                        <AnchorPane fx:id="goToThigh" layoutX="423.0" layoutY="10.0" prefHeight="173.0" prefWidth="120.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="85.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -136,16 +136,16 @@
                            <children>
                               <VBox layoutY="23.0" prefHeight="177.0" prefWidth="374.0" spacing="5.0">
                                  <children>
-                                    <AnchorPane prefHeight="365.0" prefWidth="374.0">
+                                    <AnchorPane fx:id="goToChest" prefHeight="365.0" prefWidth="374.0">
                                        <children>
-                                          <AnchorPane layoutY="3.0" prefHeight="47.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="benchPress" layoutY="3.0" prefHeight="47.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/bench-press.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Bench Press">
+                                                <Label fx:id="nameSession1" layoutX="76.0" layoutY="15.0" text="Bench Press">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -157,14 +157,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="declinePress" layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Decline%20Press.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Decline Press">
+                                                <Label fx:id="nameSession2" layoutX="76.0" layoutY="15.0" text="Decline Press">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -176,14 +176,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="dumbbellPress" layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Dumbell%20Press.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Dumbbell Press">
+                                                <Label fx:id="nameSession3" layoutX="76.0" layoutY="15.0" text="Dumbbell Press">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -195,14 +195,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="148.0" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="flyMachine" layoutY="148.0" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Fly%20Machine.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Fly Machine">
+                                                <Label fx:id="nameSession4" layoutX="76.0" layoutY="15.0" text="Fly Machine">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -214,14 +214,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="197.3333282470703" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="dips" layoutY="197.3333282470703" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/dips.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Dips">
+                                                <Label fx:id="nameSession5" layoutX="76.0" layoutY="15.0" text="Dips">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -233,14 +233,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="246.6666717529297" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="pressMachine" layoutY="246.6666717529297" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Chest%20Press%20Machine.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Chest Press Machine">
+                                                <Label fx:id="nameSession6" layoutX="76.0" layoutY="15.0" text="Chest Press Machine">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -252,14 +252,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="297.0" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="abRoller" layoutY="297.0" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Ab%20Roller.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="AB Roller">
+                                                <Label fx:id="nameSession7" layoutX="76.0" layoutY="15.0" text="AB Roller">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -273,16 +273,16 @@
                                           </AnchorPane>
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="324.0" prefWidth="374.0">
+                                    <AnchorPane fx:id="goToShoulder" layoutX="10.0" layoutY="10.0" prefHeight="324.0" prefWidth="374.0">
                                        <children>
-                                          <AnchorPane prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="barbellPress" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Barbell%20Military%20Press.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Barbell Military Press">
+                                                <Label fx:id="nameSession8" layoutX="76.0" layoutY="15.0" text="Barbell Military Press">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -294,14 +294,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="lateralRaises" layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Lateral%20Raises.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Lateral Raises">
+                                                <Label fx:id="nameSession9" layoutX="76.0" layoutY="15.0" text="Lateral Raises">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -313,14 +313,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="dumbbellRaises" layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Front%20Dumbbell%20Raises.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Front Dumbbell Raises">
+                                                <Label fx:id="nameSession10" layoutX="76.0" layoutY="15.0" text="Front Dumbbell Raises">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -334,16 +334,16 @@
                                           </AnchorPane>
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="363.0" prefHeight="324.0" prefWidth="374.0">
+                                    <AnchorPane fx:id="goToTricep" layoutX="10.0" layoutY="363.0" prefHeight="324.0" prefWidth="374.0">
                                        <children>
-                                          <AnchorPane prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="cableTricep" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Cable%20Tricep.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Cable Tricep">
+                                                <Label fx:id="nameSession11" layoutX="76.0" layoutY="15.0" text="Cable Tricep">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -355,14 +355,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="OverheadTricep" layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Overhead%20Tricep.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Overhead Tricep">
+                                                <Label fx:id="nameSession12" layoutX="76.0" layoutY="15.0" text="Overhead Tricep">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -374,14 +374,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="pushdownTricep" layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Pushdown%20Tricep.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Pushdown Tricep">
+                                                <Label fx:id="nameSession13" layoutX="76.0" layoutY="15.0" text="Pushdown Tricep">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -395,16 +395,16 @@
                                           </AnchorPane>
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="517.0" prefHeight="324.0" prefWidth="374.0">
+                                    <AnchorPane fx:id="goToStomach" layoutX="10.0" layoutY="517.0" prefHeight="324.0" prefWidth="374.0">
                                        <children>
-                                          <AnchorPane prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="pullUp" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/pull-up.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Pull up">
+                                                <Label fx:id="nameSession14" layoutX="76.0" layoutY="15.0" text="Pull up">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -416,14 +416,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="pullDown" layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/lat-pulldown-machine.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Lat pull down">
+                                                <Label fx:id="nameSession15" layoutX="76.0" layoutY="15.0" text="Lat pull down">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -435,14 +435,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="cableRow" layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Seated%20Cable%20Row.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Seated Cable Row">
+                                                <Label fx:id="nameSession16" layoutX="76.0" layoutY="15.0" text="Seated Cable Row">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -456,16 +456,16 @@
                                           </AnchorPane>
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="365.0" prefWidth="374.0">
+                                    <AnchorPane fx:id="goToLat" layoutX="10.0" layoutY="10.0" prefHeight="365.0" prefWidth="374.0">
                                        <children>
-                                          <AnchorPane layoutY="3.0" prefHeight="47.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="squat" layoutY="3.0" prefHeight="47.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/squat.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Squat">
+                                                <Label fx:id="nameSession17" layoutX="76.0" layoutY="15.0" text="Squat">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -477,14 +477,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="barbellSquat" layoutY="49.33333206176758" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Barbell%20Squat.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Barbell Squat">
+                                                <Label fx:id="nameSession18" layoutX="76.0" layoutY="15.0" text="Barbell Squat">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -496,14 +496,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="splitSquat" layoutY="98.66666412353516" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Split%20Squat.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Split Squat">
+                                                <Label fx:id="nameSession19" layoutX="76.0" layoutY="15.0" text="Split Squat">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -515,14 +515,14 @@
                                                 </ImageView>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutY="148.0" prefHeight="50.0" prefWidth="374.0">
+                                          <AnchorPane fx:id="halfSquat" layoutY="148.0" prefHeight="50.0" prefWidth="374.0">
                                              <children>
                                                 <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../../../img/Half%20Squat.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label layoutX="76.0" layoutY="15.0" text="Half Squat">
+                                                <Label fx:id="nameSession20" layoutX="76.0" layoutY="15.0" text="Half Squat">
                                                    <font>
                                                       <Font name="Poppins Regular" size="13.0" />
                                                    </font>
@@ -545,5 +545,10 @@
             </ScrollPane>
          </children>
       </AnchorPane>
+      <ImageView fx:id="onClickBack" fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Back.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

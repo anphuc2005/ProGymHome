@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "namePratice": "Bench Press",
+      "detailPratice": "10x3"
+    },
+    {
+      "namePratice": "Dead Lift",
+      "detailPratice": "10x3"
+    }
+  ]
+}

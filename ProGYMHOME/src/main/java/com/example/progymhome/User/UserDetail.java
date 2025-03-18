@@ -8,8 +8,8 @@ public class UserDetail {
     private String password;
     private String phoneNumber;
     private LocalDate dateOfBirth;
-    private String height;
-    private String weight;
+    private double height;
+    private double weight;
     private String weightUnit;
     private String heightUnit;
     private Integer age;
@@ -64,19 +64,19 @@ public class UserDetail {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
@@ -106,6 +106,37 @@ public class UserDetail {
 
     public boolean isValidLogin(String username, String password) {
         return this.username.equals(username) && this.password.equals(password);
+    }
+
+    public boolean isValidDigit(String temp)
+    {
+        for (int i = 0 ; i < temp.length() ; ++i)
+        {
+            if(!Character.isDigit(temp.charAt(i)))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void changeWeightAndHeight ()
+    {
+        if(weightUnit == "Pound")
+        {
+            weight *= 0.45;
+            weightUnit = "Kg";
+        }
+        if(heightUnit == "M")
+        {
+            height *= 100;
+            heightUnit = "Cm";
+        }
+        else if(heightUnit == "feet")
+        {
+            height *= 30.48;
+            heightUnit = "Cm";
+        }
     }
 
 
