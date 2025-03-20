@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Phúc",
+    "username": "a",
+    "password": "a",
+    "dateOfBirth": "2020-03-05",
+    "height": 175.0,
+    "weight": 65.0,
+    "weightUnit": "KG",
+    "heightUnit": "Cm",
+    "age": 5,
+    "userListSession": {
+      "users": [
+        {
+          "namePratice": "Bench Press",
+          "detailPratice": "10x3"
+        },
+        {
+          "namePratice": "Dead Lift",
+          "detailPratice": "10x3"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Do Vu Hai Dang",
+    "username": "b",
+    "password": "b",
+    "dateOfBirth": "2010-03-04",
+    "height": 175.0,
+    "weight": 65.0,
+    "weightUnit": "KG",
+    "heightUnit": "Cm",
+    "age": 15,
+    "userListSession": {
+      "users": []
+    }
+  }
+]
