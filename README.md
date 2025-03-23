@@ -12,12 +12,12 @@ Ngày nay, tỉ lệ mọi người bị các vấn đề về sức khỏe ngà
 
 ## Screen Shot
 
-<img src= "imgproject\img1.png">
-<img src= "imgproject\img2.png">
-<img src= "imgproject\img3.png">
-<img src= "imgproject\img4.png">
-<img src= "imgproject\img 5.png">
-<img src= "imgproject\img6.png">
+<img src= "\imgproject\img1.PNG">
+<img src= "\imgproject\img2.PNG">
+<img src= "\imgproject\img3.PNG">
+<img src= "\imgproject\img4.PNG">
+<img src= "\imgproject\img 5.PNG">
+<img src= "\imgproject\img6.PNG">
 
 ## ClassDiagram và ActivityDiagram
 
