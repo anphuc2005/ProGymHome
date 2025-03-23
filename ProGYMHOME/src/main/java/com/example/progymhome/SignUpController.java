@@ -46,6 +46,7 @@ public class SignUpController {
     public static boolean userExist = true;
     @FXML
     void initialize() {
+        user = user.getInstance();
         userManager = userManager.getInstance();
         onClickBack.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -75,13 +76,36 @@ public class SignUpController {
                     alert.show();
                     return;
                 }
+
                 else
                 {
-                    user = user.getInstance();
-                    user.setUsername(usernameTextField.getText());
-                    user.setPassword(passwordTextField.getText());
-                    userManager.addUser(user);
-                    userExist = false;
+                    if(userManager.checkUserOnList(usernameTextField.getText(), passwordTextField.getText()) == false)
+                    {
+                        if(user.isValidDigit(phoneNumberField.getText()))
+                        {
+                            user = new UserDetail();
+                            user.setUsername(usernameTextField.getText());
+                            user.setPassword(passwordTextField.getText());
+                            user.setPhoneNumber(phoneNumberField.getText());
+                            ProfileSetupController.userName = user.getUsername();
+                            userManager.addUser(user);
+                            userManager.saveToFile("src/main/java/com/example/progymhome/User/userData.json");
+                            userManager.loadFromFile("src/main/java/com/example/progymhome/User/userData.json");
+                            userExist = false;
+                        }
+                        else
+                        {
+                            alert.setContentText("Your phone number is not correct. Please try again");
+                            alert.show();
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        alert.setContentText("Your username is exits. Please change your username");
+                        alert.show();
+                        return;
+                    }
                 }
                 try
                 {

@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "namePratice": "Bench Press",
+      "detailPratice": "10x3"
+    },
+    {
+      "namePratice": "Dead Lift",
+      "detailPratice": "10x3"
+    },
+    {
+      "namePratice": "Shoulder Press",
+      "detailPratice": "10x3"
+    },
+    {
+      "namePratice": "Tricep Curl",
+      "detailPratice": "10x3"
+    }
+  ]
+}
