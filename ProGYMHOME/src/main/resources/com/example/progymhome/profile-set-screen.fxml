@@ -27,23 +27,29 @@
             <HBox prefHeight="48.0" prefWidth="315.0">
                <children>
                   <TextField fx:id="weightTextField" prefHeight="48.0" prefWidth="220.0" promptText="Your Weight" style="-fx-background-radius: 25px;" />
-                  <MenuButton fx:id="weightUnit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="49.0" prefWidth="97.0" style="-fx-background-radius: 25;" text="Unit">
+                  <MenuButton fx:id="weightUnit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="49.0" prefWidth="97.0" style="-fx-background-radius: 25; -fx-background-color: linear-gradient(to right, #C58BF2,#EEA4CE);" text="Unit" textFill="WHITE">
                     <items>
                       <MenuItem fx:id="menuItem" mnemonicParsing="false" text="KG" />
                       <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Pound" />
                     </items>
+                     <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                     </font>
                   </MenuButton>
                </children>
             </HBox>
             <HBox prefHeight="48.0" prefWidth="315.0">
                <children>
                   <TextField fx:id="heightTextField" prefHeight="48.0" prefWidth="220.0" promptText="Yout Height" style="-fx-background-radius: 25;" />
-                  <MenuButton fx:id="heightUnit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="97.0" style="-fx-background-radius: 25;" text="Unit">
+                  <MenuButton fx:id="heightUnit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="97.0" style="-fx-background-radius: 25; -fx-background-color: linear-gradient(to right, #C58BF2,#EEA4CE);" text="Unit" textFill="WHITE">
                     <items>
                       <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Cm" />
                       <MenuItem fx:id="menuItem" mnemonicParsing="false" text="M" />
                         <MenuItem fx:id="menuItem" mnemonicParsing="false" text="Feet" />
                     </items>
+                     <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                     </font>
                   </MenuButton>
                </children>
             </HBox>

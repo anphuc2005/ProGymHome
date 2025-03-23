@@ -38,7 +38,7 @@ public class ProfileScreenController {
     private ImageView onClickProgress;
 
     @FXML
-    private ImageView onClickSetUp;
+    private ImageView onClickLogout;
 
     @FXML
     private Text setAgeUser;
@@ -64,18 +64,18 @@ public class ProfileScreenController {
     @FXML
     void initialize() {
         System.out.println("abc");
-            user = user.getInstance();
             userManager = userManager.getInstance();
 //            setNameTextFIeld.setText(user.getName());
 //            setWeightUser.setText(user.getWeight() + user.getWeightUnit());
 //            setHeightUser.setText(user.getHeight() + user.getHeightUnit());
 //            setAgeUser.setText(user.getAge() + "y0");
-            user = userManager.findUser(userName);
+        user = userManager.findUser(SignInController.userName);
+        System.out.println(SignInController.userName);
         System.out.println(user);
         if (user != null) {
             setNameTextFIeld.setText(user.getName());
-            setWeightUser.setText(user.getWeight() + user.getWeightUnit());
-            setHeightUser.setText(user.getHeight() + user.getHeightUnit());
+            setWeightUser.setText(String.format("%.0f %s", user.getWeight(), user.getWeightUnit()));
+            setHeightUser.setText(String.format("%.0f %s", user.getHeight(), user.getHeightUnit()));
             setAgeUser.setText(user.getAge() + " years");
         }
 
@@ -113,6 +113,17 @@ public class ProfileScreenController {
                     try
                     {
                         SwitchScreenController.switchToScene1(mouseEvent, "user-progress-screen.fxml");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+            onClickLogout.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    try
+                    {
+                        SwitchScreenController.switchToScene1(mouseEvent,"sign-in.fxml");
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

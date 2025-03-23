@@ -22,10 +22,16 @@ public class UserListSession {
     {
         users.add(userSession);
     }
+    public void deleteUserSession (UserSession userSession)
+    {
+        users.remove(userSession);
+    }
 
     public ArrayList<UserSession> getUsers() {
         return users;
     }
+
+
 
     public void setUsers(ArrayList<UserSession> users) {
         this.users = users;

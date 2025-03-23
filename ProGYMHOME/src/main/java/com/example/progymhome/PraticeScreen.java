@@ -4,14 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
 import com.example.progymhome.Screen.ScreenBackManager;
+import com.example.progymhome.User.UserDetail;
 import com.example.progymhome.User.UserListSession;
+import com.example.progymhome.User.UserManager;
 import com.example.progymhome.User.UserSession;
 import javafx.event.EventHandler;
-
-import com.example.progymhome.User.UserSession;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -226,14 +224,16 @@ public class PraticeScreen {
 
     private UserSession userSession;
     private UserListSession userListSession;
-
+    private UserManager userManager;
+    private UserDetail userDetail;
 
     @FXML
     void initialize() {
 
         userSession = UserSession.getInstance();
         userListSession = userListSession.getInstance();
-
+        userManager = userManager.getInstance();
+        userDetail = userManager.findUser(SignInController.userName);
 
 
         Pane[] workoutPanes = {
@@ -251,14 +251,13 @@ public class PraticeScreen {
                 , detailSession8, detailSession9, detailSession10, detailSession11, detailSession12, detailSession13, detailSession14, detailSession15,
                 detailSession16
         };
-
+        //UserListSession newUserList = new UserListSession();
         for (int i = 0; i < workoutPanes.length; ++i) {
             if (workoutPanes[i] != null) {
                 int finalI = i;
                 workoutPanes[i].setOnMouseClicked(event -> {
                     // Tạo đối tượng UserSession mới
                     UserSession newUserSession = new UserSession();
-
                     // Thiết lập các giá trị cho đối tượng UserSession mới
                     newUserSession.setNamePratice(nameLabel[finalI].getText());
                     newUserSession.setDetailPratice(detailLabel[finalI].getText());
@@ -266,14 +265,15 @@ public class PraticeScreen {
                     userSession.setDetailPratice(detailLabel[finalI].getText());
                     handleWorkoutClick(event);
 
-                    // Thêm đối tượng UserSession mới vào UserListSession
-                    newUserSession.setTime(WorkoutController.time);
+//                    newUserList.addUserSession(newUserSession);
+//                    userManager.addUserListSession(newUserList);
+//                    System.out.println(newUserList);
                     userListSession.addUserSession(newUserSession);
+                    userDetail.setUserListSession(userListSession);
+                    userManager.updateUser(userDetail,"D:\\Package IDE Java\\ProGYMHOME\\src\\main\\java\\com\\example\\progymhome\\User\\userData.json");
+                    System.out.println(userListSession);
 
-                    // Xử lý sự kiện click
-                    userSession.setNamePratice(nameLabel[finalI].getText());
-                    userSession.setDetailPratice(detailLabel[finalI].getText());
-                    handleWorkoutClick(event);
+
 
                 });
             }
@@ -301,7 +301,6 @@ public class PraticeScreen {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-
             }
         });
     }
@@ -310,7 +309,6 @@ public class PraticeScreen {
     private void handleWorkoutClick(MouseEvent event) {
         try {
             ScreenBackManager.pushScreen("pratice-screen.fxml");
-
             SwitchScreenController.switchToScene1(event, "workout-video-screen.fxml");
         } catch (IOException e) {
             e.printStackTrace();

@@ -3,6 +3,7 @@ package com.example.progymhome;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -17,9 +18,10 @@ public class HelloApplication extends Application {
         loadAllFonts();
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("customize-pratice.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("welcome-screen.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 376, 640);
             stage.setTitle("ProGymHome");
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/logoPro.png")));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

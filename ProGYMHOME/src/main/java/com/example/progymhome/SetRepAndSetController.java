@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+import com.example.progymhome.User.UserDetail;
 import com.example.progymhome.User.UserListSession;
+import com.example.progymhome.User.UserManager;
 import com.example.progymhome.User.UserSession;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -58,13 +59,14 @@ public class SetRepAndSetController {
     private UserSession userSession;
     private UserListSession userListSession;
     private Stage newStage;
+    private UserManager userManager;
+    private UserDetail userDetail;
     @FXML
     void initialize() {
         userSession = userSession.getInstance();
-        userListSession= userListSession.getInstance();
-    @FXML
-    void initialize() {
-        userSession = userSession.getInstance();
+        userManager = userManager.getInstance();
+        userDetail = userManager.findUser(SignInController.userName);
+        userListSession = userDetail.getUserCustomSession();
         repTextField.setText("0");
         setTextField.setText("0");
         nameLesson.setText(userSession.getNamePratice());
@@ -83,15 +85,20 @@ public class SetRepAndSetController {
                 try {
 
                     UserSession newUserSession = new UserSession();
-
-
                     newUserSession.setDetailPratice(setTextField.getText() + "x" + repTextField.getText());
-                    System.out.println(setTextField.getText() + " " + repTextField.getText());
+                    //System.out.println(setTextField.getText() + " " + repTextField.getText());
                     newUserSession.setNamePratice(userSession.getNamePratice());
 
 
                     userListSession.addUserSession(newUserSession);
-
+                    userDetail.setUserCustomSession(userListSession);
+                    //System.out.println(newUserSession + " " + userListSession + " " + userDetail);
+                    userManager.updateUser(userDetail,"D:\\Package IDE Java\\ProGYMHOME\\src\\main\\java\\com\\example\\progymhome\\User\\userData.json");
+//                    for (UserSession user : userDetail.getUserCustomSession().getUsers())
+//                    {
+//                        System.out.println(user.getNamePratice() + " " + user.getDetailPratice());
+//                        System.out.println("-----");
+//                    }
 
                     Stage stage = (Stage) onClickClose.getScene().getWindow();
                     stage.close();
@@ -112,21 +119,17 @@ public class SetRepAndSetController {
                         System.out.println("xyz");
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("add-screen.fxml"));
                         Parent root = loader.load();
-
                         newStage.getScene().setRoot(root);
                     }
-                try
-                {
-                    userSession.setDetailPratice(setTextField.getText() + "x" + repTextField.getText());
-                    System.out.println(setTextField.getText() + " " + repTextField.getText());
-                    Stage stage = (Stage) onClickClose.getScene().getWindow();
-                    stage.close();
-                    SwitchScreenController.openNewWindow(actionEvent, "add-screen.fxml", 376,640);
+
+
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
         });
+
+
         onRepIncrease.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {

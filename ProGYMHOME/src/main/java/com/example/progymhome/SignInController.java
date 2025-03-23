@@ -12,6 +12,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
@@ -38,7 +39,13 @@ public class SignInController {
     @FXML
     private TextField usernameTextField;
 
+    @FXML
+    private ImageView showPassword;
+
+    boolean isShowPass;
+
     private UserManager userManager;
+    public static String userName;
 
     @FXML
     void initialize() {
@@ -73,6 +80,7 @@ public class SignInController {
                     if(SignUpController.userExist == false)
                     {
                         try {
+                            userName = usernameTextField.getText();
                             SwitchScreenController.switchToScene(actionEvent, "profile-set-screen.fxml");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
@@ -81,7 +89,7 @@ public class SignInController {
                     else
                     {
                         try {
-
+                            userName = usernameTextField.getText();
                             SwitchScreenController.switchToScene(actionEvent, "profile-screen.fxml");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
@@ -101,6 +109,22 @@ public class SignInController {
                     SwitchScreenController.switchToScene1(mouseEvent, "sign-up.fxml");
                 } catch (IOException e) {
                     throw new RuntimeException(e);
+                }
+            }
+        });
+
+        showPassword.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                if (!isShowPass) {
+                    showPassword.setImage(new Image(getClass().getResource("/img/hide.png").toExternalForm()));
+                    passwordTextField.setVisible(false);
+                    isShowPass = true;
+                } else {
+                    showPassword.setImage(new Image(getClass().getResource("/img/show.png").toExternalForm()));
+                    passwordTextField.setVisible(true);
+                    passwordTextField.setText(passwordTextField.getText());
+                    isShowPass = false;
                 }
             }
         });

@@ -15,9 +15,11 @@ public class UserManager {
     private static UserManager instance;
     private ArrayList<UserDetail> users;
 
+
     public UserManager()
     {
         this.users = new ArrayList<>();
+
     }
     public static UserManager getInstance()
     {
@@ -36,7 +38,15 @@ public class UserManager {
 
         String temp = gson.toJson(users);
         System.out.println(temp);
+        saveToFile("D:\\Package IDE Java\\ProGYMHOME\\src\\main\\java\\com\\example\\progymhome\\User\\userData.json");
     }
+
+//    public void addUserListSession (UserListSession user)
+//    {
+//        UserDetail currentUserDetail = UserDetail.getInstance();
+//        currentUserDetail.setUserListSession();
+//        saveUserToFile("src/main/java/com/example/progymhome/User/userListSessions.json");
+//    }
     public void saveToFile(String fileName) {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(LocalDate.class, new LocalDateJson())
@@ -47,6 +57,7 @@ public class UserManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public void loadFromFile(String fileName) {
@@ -72,6 +83,9 @@ public class UserManager {
                 user.setWeightUnit(updatedUser.getWeightUnit());
                 user.setHeightUnit(updatedUser.getHeightUnit());
                 user.setAge(updatedUser.getAge());
+                user.setUserListSession(updatedUser.getUserListSession());
+                user.setUserCustomSession(updatedUser.getUserCustomSession());
+                user.setPhoneNumber(updatedUser.getPhoneNumber());
                 break;
             }
         }
@@ -95,4 +109,32 @@ public class UserManager {
         }
         return false;
     }
+
+
+
+//    public void saveUserToFile(String fileName) {
+//        Gson gson = new GsonBuilder()
+//                .registerTypeAdapter(LocalDate.class, new LocalDateJson())
+//                .create();
+//        try (FileWriter writer = new FileWriter(fileName)) {
+//            // Lưu dữ liệu của userListSessions vào file
+//            gson.toJson(userListSessions, writer);
+//            System.out.println("Dữ liệu đã được lưu vào file " + fileName);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    public void loadUserFromFile(String fileName) {
+//        Gson gson = new GsonBuilder()
+//                .registerTypeAdapter(LocalDate.class, new LocalDateJson())
+//                .create();
+//        try (FileReader reader = new FileReader(fileName)) {
+//            // Đảm bảo rằng bạn đọc vào đối tượng UserListSession
+//            Type userListSessionType = new TypeToken<UserListSession>(){}.getType();
+//            userListSessions = gson.fromJson(reader, userListSessionType);
+//            System.out.println("Dữ liệu đã được tải từ file " + fileName);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

@@ -12,8 +12,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import com.example.progymhome.User.UserSession;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -70,7 +68,7 @@ public class WorkoutController {
     private String videoID;
     private UserListSession userListSession;
     public static double time;
-
+    public static boolean checkDone;
     @FXML
     void initialize() {
         long startTime = System.currentTimeMillis();
@@ -94,6 +92,7 @@ public class WorkoutController {
             repLesson.setText(part[0] + " reps");
         }
 
+
         onClickPlay.setOnMouseClicked(event -> {
             if (!isPlaying) {
                 executeJS("playVideo()");
@@ -109,7 +108,6 @@ public class WorkoutController {
         onClickBack10s.setOnMouseClicked(event -> executeJS("rewindVideo()"));
         onClickForward10s.setOnMouseClicked(event -> executeJS("forwardVideo()"));
 
-
         returnScreen.setOnMouseClicked(event -> {
             try {
 
@@ -120,6 +118,8 @@ public class WorkoutController {
                     System.out.println(backScreen);
                     SwitchScreenController.switchToScene1(event, backScreen);
                 }
+
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -127,23 +127,29 @@ public class WorkoutController {
         onClickDone.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
+                checkDone = false;
                 long endTime = System.currentTimeMillis();
                 time = (endTime - startTime) /60000.0;
-//                userSession.setTime(lessionTime);
                 System.out.println(time);
-                try {
-                    executeJS("pauseVideo()");
-                    String backScreen = ScreenBackManager.popScreen();
-                    if(backScreen != null)
-                    {
-                        System.out.println(backScreen);
-                        SwitchScreenController.switchToScene1(mouseEvent, backScreen);
+                checkDone = true;
+
+                if(checkDone)
+                {
+                    try {
+                        executeJS("pauseVideo()");
+                        String backScreen = ScreenBackManager.popScreen();
+                        if(backScreen != null)
+                        {
+                            System.out.println(backScreen);
+                            SwitchScreenController.switchToScene1(mouseEvent, backScreen);
+                        }
+
+
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
                     }
-
-
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
                 }
+
             }
         });
 
@@ -200,4 +206,5 @@ public class WorkoutController {
         }
         return "defaultVideoID";
     }
+
 }

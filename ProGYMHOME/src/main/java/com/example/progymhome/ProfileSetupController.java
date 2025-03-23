@@ -96,19 +96,27 @@ public class ProfileSetupController {
                     {
                         user.setDateOfBirth(dateOfBirthTextField.getValue());
                         user.setName(nameTextField.getText());
-                        user.setWeight(weightTextField.getText());
-                        user.setHeight(heightTextField.getText());
+                        if(user.isValidDigit(weightTextField.getText()) && user.isValidDigit(heightTextField.getText()))
+                        {
+                            double weight = Double.parseDouble(weightTextField.getText());
+                            double height = Double.parseDouble(heightTextField.getText());
+                            user.setWeight(weight);
+                            user.setHeight(height);
+                        }
+
                         user.setWeightUnit(weightUnit.getText());
                         user.setHeightUnit(heightUnit.getText());
+                        user.changeWeightAndHeight();
                         LocalDate now = LocalDate.now();
                         int age = Period.between(dateOfBirthTextField.getValue(), now).getYears();
                         user.setAge(age);
 //                    System.out.println(user.getUsername() + " " + user.getWeight() + user.getWeightUnit() + " " + user.getHeight() + user.getHeightUnit() + " " + user.getPassword() + " " + user.getPhoneNumber() + " " + user.getAge());
-                        UserManager userManager = UserManager.getInstance();
+                        //UserManager userManager = UserManager.getInstance();
                         userManager.loadFromFile("src/main/java/com/example/progymhome/User/userData.json");
                         userManager.updateUser(user, "src/main/java/com/example/progymhome/User/userData.json");
                         ProfileScreenController.userName = user.getUsername();
                     }
+
 
 
                 }
