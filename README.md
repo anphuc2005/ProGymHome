@@ -12,12 +12,12 @@ Ngày nay, tỉ lệ mọi người bị các vấn đề về sức khỏe ngà
 
 ## Screen Shot
 
-<img src= "ProGYMHOME\imgproject\img1.png">
-<img src= "ProGYMHOME\imgproject\img2.png">
-<img src= "ProGYMHOME\imgproject\img3.png">
-<img src= "ProGYMHOME\imgproject\img4.png">
-<img src= "ProGYMHOME\imgproject\img 5.png">
-<img src= "ProGYMHOME\imgproject\img6.png">
+<img src= "imgproject\img1.png">
+<img src= "imgproject\img2.png">
+<img src= "imgproject\img3.png">
+<img src= "imgproject\img4.png">
+<img src= "imgproject\img 5.png">
+<img src= "imgproject\img6.png">
 
 ## ClassDiagram và ActivityDiagram
 
